@@ -88,9 +88,16 @@ if 'merged_df' in locals():
 
             st.altair_chart(teacher_quality_pie_chart, use_container_width=True)
 
-        # Tabela detalhada
-        st.subheader("Tabela de Dados Combinados")
-        st.dataframe(filtered_df)
+            # Remover duplicatas com base no nome e na nota final para evitar repetição de alunos
+            filtered_df = filtered_df.drop_duplicates(subset=['Name', 'FinalGrade'])
+
+    # Top 5 alunos com as maiores notas finais
+        st.subheader("Top 5 Alunos com as Maiores Notas Finais")
+        top5_students = filtered_df.nlargest(5, 'FinalGrade')[['Name', 'FinalGrade', 'StudyHoursPerWeek', 'ExtracurricularActivities']]
+
+# Exibir a tabela
+        st.table(top5_students)
+
 
     # Página 2: Fatores Influenciadores
     elif page == "Fatores Influenciadores":
