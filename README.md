@@ -42,7 +42,7 @@ O principal objetivo deste dashboard é facilitar a visualização dos dados e i
 ## 📈 Exemplos de Gráficos Utilizados
 - **Gráficos de dispersão (Altair)**: Para visualizar a correlação entre horas de estudo e notas finais.
 - **Gráficos de pizza (Altair)**: Para mostrar a distribuição da qualidade do ensino.
-- **Box plots (Altair)**: Para analisar a distribuição das notas por gênero.
+- **Gráficos de barras (Altair)**: Para analisar a distribuição das notas por gênero.
 - **Gráficos de barras (Altair)**: Para visualizar a média das notas finais por diferentes fatores.
 
 ## 📑 Estrutura do Código
